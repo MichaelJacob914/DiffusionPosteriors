@@ -467,20 +467,20 @@ def preprocess(list):
 
 comp_fields = []
 for i in range(30, 55):
-    path = '/Users/michaeljacob/Diffusion/data/data_images_grey/'
+    path = "PATH"
     img_tensor = get_image(path + f"WLconv_z2.00_{i:04d}r")
     comp_fields.append(img_tensor)
 
 #plot_median_power_spectrum(fields, 256, comparison_fields = comp_fields)
 
 # Path to your image
-image_path = '/Users/michaeljacob/Diffusion/results/NET16-sample-2'
+image_path = "PATH"
 img_tensor = get_image(image_path)
 fields = get_all_slices(img_tensor)
 
 
 # Path to your image
-image_path = '/Users/michaeljacob/Diffusion/results/sample-60'
+image_path = "PATH"
 img_tensor = get_image(image_path)
 fields_new = get_all_slices(img_tensor)
 
@@ -530,12 +530,12 @@ def arrange_images(images, grid_size=(5, 5), padding=10, bg_color=(0, 0, 0)):
 
 image_files = []
 for i in range(30, 55):
-    path = '/Users/michaeljacob/Diffusion/data/data_images_grey/' + f"WLconv_z2.00_{i:04d}r" + ".png"
+    path = "PATH" + f"WLconv_z2.00_{i:04d}r" + ".png"
     image_files.append(path)
 images = [Image.open(image_file) for image_file in image_files]
 grid_image = arrange_images(images, grid_size=(5, 5), padding=2, bg_color=(0, 0, 0))
 
-grid_image.save("grid_image_2.png")
+grid_image.save("grid_image.png")
 
 
 # In[ ]:
